@@ -1,11 +1,8 @@
 from flask import Flask
-from flask_restful import Api
 
-app = Flask(__name__)
-api = Api(app)
+app1 = Flask(__name__)
 
-@app.route('/')
-def getmethod():
+def get():
     return {'message':"Hello Suraj"}
 
-app.run(port = 5000)
+app1.run(port = 5000)
