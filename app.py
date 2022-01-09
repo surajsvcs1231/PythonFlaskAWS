@@ -1,8 +1,10 @@
 from flask import Flask
 
-app1 = Flask(__name__)
+app = Flask(__name__)
 
-def get():
-    return {'message':"Hello Suraj"}
+@app.route('/',methods=['GET','POST'])
+def index():
+    return "Flask application is running and created by Suraj"
 
-app1.run(port = 5000)
+if __name__=="__main__":
+	app.run()
